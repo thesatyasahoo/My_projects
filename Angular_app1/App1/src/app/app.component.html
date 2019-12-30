@@ -3,40 +3,40 @@
   <form #userForm= "ngForm">
         <!-- {{ userForm.value | json}} -->
     <div class="form-group">
-      <label>Name</label>
-      <input type="text" ngModel name="FullName" class="form-control">
+      <label>Name<span style="color: red;">*</span></label>
+      <input type="text" ngModel name="FullName" placeholder="FullName" class="form-control" autocomplete="off">
     </div>
     <div class="form-group">
-      <label>Email</label>
-      <input type="email" ngModel name="Email" class="form-control">
+      <label>E-mail<span style="color: red;">*</span></label>
+      <input type="email" ngModel name="Email" placeholder="E-mail" class="form-control" autocomplete="off">
     </div>
     <div class="form-group">
-      <label>Phone</label>
-      <input type="tel"  ngModel name="Mobile" class="form-control">
+      <label>Phone<span style="color: red;">*</span></label>
+      <input type="tel"  ngModel name="Mobile" placeholder="Phone" class="form-control" autocomplete="off">
     </div>
     <div class="form-group">
-      <select class="custom-select"  ngModel name="Course">
+      <select class="custom-select" ngModel name="Course">
         <option selected> I am Interested in</option>
         <option *ngFor="let topic of topics">{{ topic }}</option>
       </select>
     </div>
     <div class="mb-3">
-      <label>Time Preferance</label>
+      <label>Time Preferance<span style="color: red;">*</span></label>
       <div class="row form-inline ml-5">
         <div class="form-check form-inline ml-5">
-          <input class="form-check-input" type="radio" ngModel name="timepreferance" value="morning">
+          <input class="form-check-input" type="radio" ngModel name="timepreferance" value="morning" autocomplete="off">
           <label class="form-check-label">Morning (9AM - 12PM)</label>
         </div>
         <div class="form-check form-inline ml-5">
-          <input class="form-check-input" type="radio" ngModel name="timepreferance" value="evening">
+          <input class="form-check-input" type="radio" ngModel name="timepreferance" value="evening" autocomplete="off">
           <label class="form-check-label">Evening (5PM - 8PM)</label>
         </div>
       </div>
     </div>
-    <div class="form-check form-inline ml-5">
-      <input class="form-check-input"  ngModel name="Subscribe" type="checkbox">
+    <div class="form-check form-inline offset-3">
+      <input class="form-check-input"  ngModel name="Subscribe" type="checkbox" autocomplete="off">
       <label class="form-check-label">Send Me Promotional Offers</label>
     </div>
-    <button class="btn btn-primary offset-5" type="submit">Submit Form</button>
+    <button class="btn btn-primary offset-4" type="submit">Submit Form</button>
   </form>
 </div>
